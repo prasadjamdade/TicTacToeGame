@@ -8,7 +8,7 @@ public class TicTacToeUC1 {
         methodCall.boardGenerator();
     }
     public void boardGenerator(){
-        //gameBoard[0] = ' ';
+        //gameBoard[0] = ' '; as to ignore just commenting out
         for(int board_members =1; board_members <= 9;board_members++){
             gameBoard[board_members] = ' ';
         }
