@@ -12,6 +12,7 @@ public class TicTacToeGameSimulator {
         TicTacToeGameSimulator methodCaller = new TicTacToeGameSimulator();
         methodCaller.boardGenerator();
         methodCaller.characterSelect();
+        methodCaller.boardPrint();
     }
 
     public void boardGenerator() {
@@ -43,5 +44,12 @@ public class TicTacToeGameSimulator {
                 characterSelect();
             }
         }
+    }
+
+    public void boardPrint() {
+        System.out.println("\n!....Welcome Tic Tac Toe Game Simulator....!\n\n");
+        System.out.println("|| " + gameBoard[1] + " | " + gameBoard[2] + " | " + gameBoard[3] + " ||\n");
+        System.out.println("|| " + gameBoard[4] + " | " + gameBoard[5] + " | " + gameBoard[6] + " ||\n");
+        System.out.println("|| " + gameBoard[7] + " | " + gameBoard[8] + " | " + gameBoard[9] + " ||");
     }
 }
