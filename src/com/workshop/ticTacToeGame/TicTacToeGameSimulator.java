@@ -12,6 +12,7 @@ public class TicTacToeGameSimulator {
         TicTacToeGameSimulator methodCaller = new TicTacToeGameSimulator();
         methodCaller.boardGenerator();
         methodCaller.characterSelect();
+        methodCaller.startPlay(methodCaller, userChoice);
         methodCaller.boardPrint();
     }
 
@@ -51,5 +52,16 @@ public class TicTacToeGameSimulator {
         System.out.println("|| " + gameBoard[1] + " | " + gameBoard[2] + " | " + gameBoard[3] + " ||\n");
         System.out.println("|| " + gameBoard[4] + " | " + gameBoard[5] + " | " + gameBoard[6] + " ||\n");
         System.out.println("|| " + gameBoard[7] + " | " + gameBoard[8] + " | " + gameBoard[9] + " ||");
+    }
+
+    public void startPlay(TicTacToeGameSimulator methodCaller, char userChoice) {
+        System.out.println("Please mark your place between 1 to 9");
+        int userInput = scanInput.nextInt();
+        if (gameBoard[userInput] == 'X' || gameBoard[userInput] == 'O') {
+            System.out.println("Position already marked");
+        } else {
+            gameBoard[userInput] = userChoice;
+        }
+        methodCaller.boardPrint();
     }
 }
